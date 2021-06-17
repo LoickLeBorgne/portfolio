@@ -1,0 +1,405 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+
+
+header#sidebar{
+ position: fixed;
+ z-index: 999;
+ background: #333;
+ height: 100vh;
+ min-width: 320px;
+ padding-left: 50px;
+ box-sizing: border-box;
+ transform: translateX(-100%);
+ transition: 0.8s;
+}
+
+header#sidebar.open-sidebar{
+  transform: translateX(0%);
+ }
+ 
+
+header#sidebar .hamburger{
+  width: 40px;
+  height: 40px;
+  background: #F85E45;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: -70px;
+  top: 35px;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+
+header#sidebar .hamburger .top,
+header#sidebar .hamburger .mid,
+header#sidebar .hamburger .bottom{ 
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: 0.5s;
+}
+
+header#sidebar.open-sidebar .hamburger .top{
+  transform: rotate(45deg);
+  position: relative;
+  top: 7px;
+  width: 30px;
+}
+
+header#sidebar.open-sidebar .hamburger .mid{
+  opacity: 0;
+ }
+ 
+
+header#sidebar.open-sidebar .hamburger .bottom{
+  transform: rotate(-45deg);
+  position: relative;
+  top: -7px;
+  width: 30px;
+}
+
+
+.navbar li{
+list-style-type: none;
+margin-bottom: 10px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color:white;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: 0.35s;
+}
+
+.navbar a:hover{
+  color:#F85E45;
+  font-size: 21px;
+}
+ 
+
+.background{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.background-profil{
+    text-align: center;
+    color:black;
+    width: 80%;
+    position: relative;
+}
+
+
+.profil-text p{
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+.svg-rond{
+  width: 250px;
+  fill: #F85E45;
+}
+.background-svg{
+  width: 200px;
+}
+
+.profil-picture{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#sidebar h3{
+  color: #F85E45;
+}
+
+
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "Continuer";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: black;
+    background: #fff;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: white;
+    content: "Vers mon portfolio";
+    background-color: #F85E45;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+.content-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color:black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #F85E45;
+  border: 4px solid black;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color :#F85E45;
+  position: relative;
+  border-radius: 6px;
+  border: 2px solid black;
+  color: white;
+}
+
+
+.inner{
+  padding-top: 20px;
+}
+
+.header{
+  text-align: center;
+  color: black;
+  padding: 1rem;
+  position: relative;
+}
+
+.header:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #F85E45;
+}
+
+.container-skills{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+}
+
+.skills-box{
+  padding: 1rem;
+  color: black;
+}
+
+.skills-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.img{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #F85E45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-icon{
+  width: 50px;
+}
+
+.skills-container{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right; 
+  vertical-align: text-top;
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  color: white; 
+}
+
+
+.html {width: 50%; background-color: #F85E45; height: 30px;} /* Green */
+.css {width: 50%; background-color: #F85E45; height: 30px;} /* Green */
+.js {width: 15%; background-color: #F85E45; height: 30px;} /* Green */
+.php {width: 10%; background-color: #F85E45; height: 30px;} /* Green */
+.bootstrap {width: 30%; background-color: #F85E45; height: 30px;} /* Green */
+
+
+
+
+.bloc-footer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #333;
+}
+
+.footer-content{
+  margin: auto;
+  color: white;
+}
+
+.footer-content li{
+  list-style-type: none;
+}
+
+.footer-content a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-content ul{
+  padding-inline-start: 0px;
+}
+
+.footer-content img{
+  width: 20%;
+}

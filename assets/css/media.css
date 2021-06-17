@@ -1,0 +1,124 @@
+@media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+  
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  
+    .right {
+      left: 0%;
+    }  
+}
+
+@media screen and (max-width: 370px){
+  .content{
+      font-size: 15px;
+  }
+
+  .content h2{
+    font-size: 10px;
+}
+  .content-title{
+      font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 990px){
+    .container-skills{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2rem 50px;
+    }
+
+    #sidebar h3{
+        font-size: 18px;
+    }
+
+    .navbar a{
+        font-size: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 720px){
+    .footer-content{
+        font-size: 10px;
+    }
+
+    .background{
+        height: 100vh;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    header#sidebar .hamburger{
+        right: -47px;
+    }
+    header#sidebar{
+        min-width: 278px
+    }
+
+    #sidebar h3{
+        font-size: 15px;
+    }
+
+    .navbar a{
+        font-size: 10px;
+    }  
+    .navbar a:hover{
+        color:#F85E45;
+        font-size: 15px;
+      }
+       
+
+    .bloc-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .content h2{
+        font-size: 12px;
+    }
+    .content-title{
+        font-size: 12px;
+    }
+
+    .profil-text{
+        padding-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .svg-rond{
+        width: 200px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 360px){
+    header#sidebar{
+        min-width: 240px
+    }
+
+    header#sidebar .hamburger{
+        right: -47px;
+    }
+}

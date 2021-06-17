@@ -1,0 +1,15 @@
+
+<div class="background">
+    <div class="start-about">
+      <h3>Bonjour,<br>
+        Je suis Loïck, en recherche d'alternance.
+      </h3>
+    </div>
+    <div class="background-profil">
+      <h1></h1>
+      <h2>Développeur front-end</h2>
+      <div class="button">
+        <span><a href="#about-me" draggable="false"></a></span>
+      </div>
+    </div>
+  </div>

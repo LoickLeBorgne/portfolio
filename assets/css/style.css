@@ -99,13 +99,46 @@ margin-bottom: 10px;
  
 
 .background{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
+.card{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+.card-text{
+}
+
+.card-text h2{
+  position: relative;
+}
+.card-text h2::after {
+  content: "";
+  position: absolute;
+  inset: 100% 50% 19% 35%;
+  height: 0.5em;
+  border-top: 4px solid rgb(248, 94, 69);
+  transform: translateX(50%);
+}
+
+.card-img{
+  width: 400px;
+}
+
+.card-text{
+  width: 600px;
+}
 
 
 

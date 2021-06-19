@@ -13,7 +13,10 @@ body{
     position: relative;
 }
 
-
+.name{
+  font-size: 25px;
+  text-align: center;
+}
 
 header#sidebar{
  position: fixed;
@@ -111,19 +114,29 @@ margin-bottom: 10px;
   height: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-
-
-.card-text{
+.card-container{
+  border-radius: 10px;
+  width: 50%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.card-text h2{
+.card-content{
+  text-align: center;
+}
+
+.card-content h2{
   position: relative;
 }
-.card-text h2::after {
+.card-content h2::after {
   content: "";
   position: absolute;
   inset: 100% 50% 19% 35%;
@@ -131,16 +144,6 @@ margin-bottom: 10px;
   border-top: 4px solid rgb(248, 94, 69);
   transform: translateX(50%);
 }
-
-.card-img{
-  width: 400px;
-}
-
-.card-text{
-  width: 600px;
-}
-
-
 
 .background-profil{
     text-align: center;
@@ -435,4 +438,28 @@ span{
 
 .footer-content img{
   width: 20%;
+}
+
+
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h4{
+  font-size: 1em;
+  color:black;
+  text-transform: uppercase;
+}
+
+span {
+  animation: caret 1s steps(1) infinite;
+}
+
+
+.spawn{
+  margin-left: 10em;
+  font-size: 25px;
 }

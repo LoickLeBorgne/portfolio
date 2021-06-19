@@ -19,14 +19,17 @@
     .left::after, .right::after {
       left: 15px;
     }
-  
+    
+    .card-content{
+        width: 100%;
+    }
   
     .right {
       left: 0%;
     }  
 }
 
-@media screen and (max-width: 370px){
+@media screen and (max-width: 375px){
   .content{
       font-size: 15px;
   }
@@ -36,6 +39,10 @@
 }
   .content-title{
       font-size: 15px;
+  }
+
+  .card-content h2::after{
+    inset: 100% 50% 19% 40%;
   }
 }
 
@@ -53,6 +60,19 @@
     .navbar a{
         font-size: 15px;
     }
+
+    .card-content{
+        padding: 1em;
+    }
+
+    .card-container{
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .card-content h2::after{
+        inset: 100% 50% 19% 30%;
+      }
 }
 
 
@@ -120,5 +140,18 @@
 
     header#sidebar .hamburger{
         right: -47px;
+    }
+
+    .card-container{
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+
+
+@media screen and (max-width: 1168px){
+    .spawn{
+        margin: 0;
+        font-size: 15px;
     }
 }
